@@ -7,8 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 import java.util.List;
 import jakarta.validation.Valid;
-
-import br.csi.ufsm.Orders.model.order.Client;
+import br.csi.ufsm.Orders.model.order.client.Client;
 import br.csi.ufsm.Orders.service.ClientService;
 
 
@@ -18,7 +17,6 @@ import br.csi.ufsm.Orders.service.ClientService;
 public class ClientController {
     
     private final ClientService service;
-
     public ClientController(ClientService service){
         this.service = service;
     }
@@ -33,7 +31,7 @@ public class ClientController {
     public ResponseEntity register(@RequestBody @Valid Client client, UriComponentsBuilder uriBuilder){
 
         this.service.register(client);
-        URI uri = uriBuilder.path("/client/{id}").buildAndExpand(client.getId()).toUri();
+        URI uri = uriBuilder.path("/client/{id}").buildAndExpand(client.getId_client()).toUri();
         return ResponseEntity.created(uri).body(client);
     }
 

@@ -1,4 +1,4 @@
-create table user(
+create table users(
     id serial primary key not null,
     login varchar (75) not null,
     password varchar(50) not null unique,

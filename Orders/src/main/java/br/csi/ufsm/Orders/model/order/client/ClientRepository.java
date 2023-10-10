@@ -1,4 +1,4 @@
-package br.csi.ufsm.Orders.model.order;
+package br.csi.ufsm.Orders.model.order.client;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.Optional;

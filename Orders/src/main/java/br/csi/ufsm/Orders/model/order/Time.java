@@ -1,26 +1,21 @@
 package br.csi.ufsm.Orders.model.order;
 
 import jakarta.persistence.Embeddable;
-import jakarta.validation.constraints.NotBlank;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Embeddable
+@Table(name = "time")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Address {
-
-    @NotBlank
-    private String neighborhood;
-    @NotBlank
-    private String street;
-    @NotBlank
-    private String cep;
-    @NotBlank
-    private String number;
+public class Time {
     
+    private Long id_time;
+    private Data data;
 }

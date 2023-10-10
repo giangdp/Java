@@ -2,8 +2,8 @@ package br.csi.ufsm.Orders.service;
 
 import org.springframework.stereotype.Service;
 
-import br.csi.ufsm.Orders.model.order.Client;
-import br.csi.ufsm.Orders.model.order.ClientRepository;
+import br.csi.ufsm.Orders.model.order.client.Client;
+import br.csi.ufsm.Orders.model.order.client.ClientRepository;
 
 import java.util.List;
 
@@ -29,7 +29,7 @@ public class ClientService {
     }
 
     public void update(Client client){
-        Client c = this.repository.getReferenceById(client.getId());
+        Client c = this.repository.getReferenceById(client.getId_client());
         c.setName(client.getName());
         c.setEmail(client.getEmail());
         c.setCellphone_number(client.getCellphone_number());
