@@ -1,6 +1,6 @@
 create table product(
-    id_product serial not null primary key,
+    id_product int not null primary key,
     name_product varchar(50),
-    price double(10),
+    price float(10),
     description varchar(500)
 )

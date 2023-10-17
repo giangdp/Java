@@ -1,4 +1,4 @@
 create table time(
-    id_time serial not null primary key,
+    id_time int not null primary key,
     data Date
 )
